@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>1. Address Resolution Protocol (ARP)
+    ARP is a protocol used in the TCP/IP stack to assist in mapping Layer 2 MAC addresses into IP addresses.
+     This protocol is important to understand because ARP lookups get cached.
+      That cache can corrupt.
+       Or just become stale and provide incorrect results.
+        Often this can be corrected simply by clearing that cache on the appropriate devices.
+</p>
+
+<p>
+    2. Spanning Tree Protocol (STP)
+        Spanning Tree is an extremely important protocol.
+    In enterprise switches it typically is enabled by default.
+    STP has a few flavors, depending on the OEM, but they all do a very important thing:
+    prevent network loops from happening.
+    
+    Sometimes network loops occur when connecting redundant connections between switches but not properly setting up LACP. It can also occur when end users try to sneak a hub or switch in under their desk to connect more devices and want to connect multiple ports for more bandwidth.
+    
+    Become a security expert
+    Cybersecurity training from CBT Nuggets
+    
+    Start training
+    Become a security expert
+    On the flipside, leaving STP enabled on ports connected to workstations can prevent protocols like DHCP from working. The port will block traffic for a set period of time to try to detect the loop before traffic occurs. Some STP implementations do this longer than a standard DHCP attempt.
+    
+    3. IEEE 802.1Q
+    IEEE 802.1Q is more of a standard than a protocol but is just as important. Many times referred to as simply dot1Q, this is the standard for VLAN tagging. It allows for a multiplexing of different VLANs over the same wire by prepending a VLAN header. Prior to this, OEMs had their own proprietary standards which were not interoperable.
+    
+    Dot1Q allows multiple VLANs to be multiplexed over a single or set of uplinks. Without it, each VLAN would need its own uplink to the next switch. Routers would also need separate uplinks to each VLAN.
+    </p>
+    <p>
+
+        4. TCP/IP
+        TCP/IP is a suite of related protocols.  At Layer 3, the Internet Protocol (IP) operates allowing for routing. At Layer 4, TCP and UDP operate giving you a stateful and stateless option. ICMP falls under this suite of protocols but does not transport data and is typically used for diagnostics.
+        
+        Most networking uses this stack. It is important to understand so that you know which protocols to use for troubleshooting.  ICMP is great for testing latency but sometimes you need to use UDP based tools when ICMP is blocked. For bandwidth and latency testing, UDP is probably better at latency while TCP is great for overall bandwidth.
+        
+        At Layer 3, understanding how IP addresses and subnets work along with the routing of this traffic can help you troubleshoot issues with traffic getting to its destination.
+        
+    </p>
+    <p>
+
+        5. HTTP
+        Hypertext Transfer Protocol (HTTP) is a higher layer protocol used by applications.  This is important because it is so widely used.  Not only do web pages and web services use it but VPN tunnels and web sockets have been known to use it as well.
+        
+        The use case for understanding HTTP is that most online services now use this.  If there are performance issues or errors, it can be helpful to understand HTTP.  This is particularly so in the case that you have to resort to using a browser debugger to help determine an error.  Sometimes HTTP error codes are buried or hidden in the HTTP results such that a browser doesn't show them but they are there.</p>
+    </p>
+
+    <h2>2_ diffrenc bettween http & https</h2>
+    <p>
+        HTTP requests and responses are sent in plaintext,
+         which means that anyone can read them. 
+         HTTPS corrects this problem by using TLS/SSL encryption.
+    </p>
+<br>
+    <h2>3_ cors error</h2>
+    <p>
+        
+    </p>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+button{
+    padding: 3px;
+    width: 100px;
+    height: 30px;
+    background-color: #00c3ff;
+    
+    border-radius: 5px;
+}
+.red{
+    background-color:red;
+}
